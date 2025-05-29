@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Time+</title>
+  <style>
+    body {
+      background-color: #111;
+      color: white;
+      font-family: Arial, sans-serif;
+      text-align: center;
+      margin: 0;
+      padding: 0;
+    }
+
+    .container {
+      margin-top: 150px;
+    }
+
+    h1 {
+      font-size: 48px;
+      color: #00ffee;
+      margin-bottom: 30px;
+    }
+
+    input[type="text"] {
+      width: 60%;
+      padding: 15px;
+      font-size: 20px;
+      border-radius: 10px;
+      border: none;
+      outline: none;
+    }
+
+    .btns {
+      margin-top: 20px;
+    }
+
+    button {
+      padding: 10px 20px;
+      font-size: 16px;
+      margin: 5px;
+      background-color: #00ffee;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      color: #000;
+    }
+
+    button:hover {
+      background-color: #00ccbb;
+    }
+
+    footer {
+      position: fixed;
+      bottom: 10px;
+      width: 100%;
+      font-size: 14px;
+      color: #666;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <h1>Time+</h1>
+    <input type="text" id="search" placeholder="Tape ta recherche ici...">
+    <div class="btns">
+      <button onclick="searchGoogle()">Google</button>
+      <button onclick="searchBing()">Bing</button>
+      <button onclick="searchYouTube()">YouTube</button>
+    </div>
+  </div>
+
+  <footer>© 2025 Time+ - Project by Andreï Barannikov 😎</footer>
+
+  <script>
+    function searchGoogle() {
+      const query = document.getElementById("search").value;
+      if (query) {
+        window.open("https://www.google.com/search?q=" + encodeURIComponent(query), "_blank");
+      }
+    }
+
+    function searchBing() {
+      const query = document.getElementById("search").value;
+      if (query) {
+        window.open("https://www.bing.com/search?q=" + encodeURIComponent(query), "_blank");
+      }
+    }
+
+    function searchYouTube() {
+      const query = document.getElementById("search").value;
+      if (query) {
+        window.open("https://www.youtube.com/results?search_query=" + encodeURIComponent(query), "_blank");
+      }
+    }
+  </script>
+
+</body>
+</html>
